@@ -15,10 +15,17 @@ license = {file = "LICENSE"}
 requires-python = ">=3.10"
 
 dependencies = [
-    "pandas",
     "numpy",
-    "matplotlib",
+    "pandas",
+    "pillow",
+    "torch",
+    "transformers",
+    "tqdm",
 ]
+
+[project.optional-dependencies]
+ocr = ["pytesseract"]
+notebooks = ["matplotlib", "pytorch-lightning", "captum", "jupyter"]
 
 [tool.setuptools]
 packages = ["weather_mind"]
